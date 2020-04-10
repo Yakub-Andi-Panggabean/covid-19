@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Covid19</string>
+    <string name="txtPositive">Kasus Positif</string>
+    <string name="txtCured">Kasus Sembuh</string>
+    <string name="txtDeath">Meninggal</string>
+    <string name="txtPositiveCaseNumber">0</string>
+    <string name="txtCuredNumber">0</string>
+    <string name="txtDeathCaseNumber">0</string>
+    <string name="lastUpdatedText">Update Terakhir :</string>
+    <string name="lastUpdatedDate"></string>
+    <string name="city"></string>
+    <string name="spread">Persebaran</string>
+    <string name="caseMenu">Persebaran</string>
+    <string name="informationMenu">Persebaran</string>
+    <string name="helpMenu">Persebaran</string>
+    <string name="textSearch">Cari</string>
+    <string name="txtLastUpdate">Data Terakhir Diupdate</string>
+    <string name="txtCovid19">Covid-19</string>
+    <string name="txtEarlySymptompTitle">Gejala Awal</string>
+    <string name="txtFirstSymptomp">Demam (Suhu badan diatas 38 derajat celcius)</string>
+    <string name="txtSecondSymptomp">Batuk</string>
+    <string name="txtThirdSymptomp">Sesak Nafas</string>
+    <string name="txtDateYear">5 April, 2020</string>
+    <string name="txtDateTime">12:00</string>
+    <string name="globalIndicator">Indikator Global</string>
+    <string name="dummyZero">0</string>
+    <string name="treatmentDescription">Dirawat</string>
+    <string name="curedeDescription">Sembuh</string>
+    <string name="mortalityeDescription">Meninggal</string>
+    <string name="confirmedDescription">Terkonfirmasi</string>
+
+
+
+
+
+
+
+
+    <string-array name="spinnerSampleData">
+
+        <item>Global</item>
+        <item>Indonesia</item>
+        <item>Jakarta</item>
+        <item>Palembang</item>
+
+
+    </string-array>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
