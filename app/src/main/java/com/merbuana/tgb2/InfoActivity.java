@@ -12,6 +12,7 @@ public class InfoActivity extends AppCompatActivity {
 
 
     private ImageButton buttonHome;
+    private ImageButton buttonHelp;
     private WebView newsWebView;
 
     @Override
@@ -19,7 +20,9 @@ public class InfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_activity);
         buttonHome = findViewById(R.id.imageButtonHome);
+        buttonHelp = findViewById(R.id.imageButtonHelp);
         buttonHome.setOnClickListener(new ImageButtonListener(this));
+        buttonHelp.setOnClickListener(new ImageButtonListener(this));
         newsWebView = findViewById(R.id.newsWebView);
         newsWebView.getSettings().setJavaScriptEnabled(true);
         newsWebView.loadUrl("https://www.google.com/search?channel=crow2&client=firefox-b-d&q=covid-19+indonesia");

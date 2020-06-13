@@ -15,10 +15,8 @@ import com.merbuana.tgb2.service.TGB2Service;
 import com.merbuana.tgb2.service.bean.TGB2ServiceBean;
 
 /**
- *
  * name : yakub andi panggabean
  * nim :41819120090
- *
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textUpdateTime;
     private Spinner spinner;
     private ImageButton infoButton;
+    private ImageButton helpButton;
 
 
     @Override
@@ -48,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
         treatmentText = findViewById(R.id.treatmentData);
         spinner = findViewById(R.id.spinnerRegion);
         infoButton = findViewById(R.id.imageButtonInfo);
+        helpButton = findViewById(R.id.imageButtonHelp);
         infoButton.setOnClickListener(new ImageButtonListener(this));
+        helpButton.setOnClickListener(new ImageButtonListener(this));
 
         tgb2Service = new TGB2ServiceBean(getApplicationContext());
 

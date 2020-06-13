@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
+import com.merbuana.tgb2.HelpActivity;
 import com.merbuana.tgb2.InfoActivity;
 import com.merbuana.tgb2.MainActivity;
 import com.merbuana.tgb2.R;
@@ -31,6 +32,13 @@ public class ImageButtonListener implements View.OnClickListener {
 
             Activity activity = (Activity) context;
             Intent intent = new Intent(activity, MainActivity.class);
+            activity.startActivity(intent);
+            activity.finish();
+
+        } else if (v.getId() == R.id.imageButtonHelp) {
+
+            Activity activity = (Activity) context;
+            Intent intent = new Intent(activity, HelpActivity.class);
             activity.startActivity(intent);
             activity.finish();
 
