@@ -1,24 +1,23 @@
-package com.merbuana.covid19.listener;
+package com.merbuana.tgb2.listener;
 
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
 
-import com.merbuana.covid19.model.response.Province;
-import com.merbuana.covid19.service.Covid19Service;
+import com.merbuana.tgb2.model.response.Province;
+import com.merbuana.tgb2.service.TGB2Service;
 
-import java.text.SimpleDateFormat;
 import java.util.concurrent.CompletableFuture;
 
 public class SearchOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
 
-    private Covid19Service service;
+    private TGB2Service service;
     private TextView textConfirmedCase;
     private TextView textFatalityCase;
     private TextView textCuredCase;
     private TextView treatmentCase;
 
-    public SearchOnItemSelectedListener(Covid19Service service, TextView textConfirmedCase, TextView textFatalityCase, TextView textCuredCase, TextView treatmentCase) {
+    public SearchOnItemSelectedListener(TGB2Service service, TextView textConfirmedCase, TextView textFatalityCase, TextView textCuredCase, TextView treatmentCase) {
         this.service = service;
         this.textConfirmedCase = textConfirmedCase;
         this.textFatalityCase = textFatalityCase;
@@ -34,7 +33,7 @@ public class SearchOnItemSelectedListener implements AdapterView.OnItemSelectedL
         if (province.getCode() == 0) {
 
             CompletableFuture.runAsync(() -> {
-                service.getCovidCases(resp -> {
+                service.getCases(resp -> {
 
                     textConfirmedCase.setText(String.valueOf(resp.getNumberOfConfirmedCase()));
                     textFatalityCase.setText(String.valueOf(resp.getNumberOfFatalityCase()));
@@ -47,7 +46,7 @@ public class SearchOnItemSelectedListener implements AdapterView.OnItemSelectedL
 
         } else {
 
-            service.getCovidCasesIndonesianProvinceDetail(province.getCode(), resp -> {
+            service.getCasesIndonesianProvinceDetail(province.getCode(), resp -> {
 
                 textConfirmedCase.setText(String.valueOf(resp.getNumberOfConfirmedCase()));
                 textFatalityCase.setText(String.valueOf(resp.getNumberOfFatalityCase()));

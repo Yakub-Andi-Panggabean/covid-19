@@ -1,4 +1,4 @@
-package com.merbuana.covid19;
+package com.merbuana.tgb2;
 
 import org.junit.Test;
 

@@ -1,12 +1,10 @@
-package com.merbuana.covid19.util;
+package com.merbuana.tgb2.util;
 
 import android.content.Context;
 import android.content.res.AssetManager;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 import okhttp3.OkHttpClient;

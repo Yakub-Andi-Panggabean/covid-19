@@ -1,4 +1,4 @@
-package com.merbuana.covid19;
+package com.merbuana.tgb2;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.merbuana.covid19", appContext.getPackageName());
+        assertEquals("com.merbuana.tgb2", appContext.getPackageName());
     }
 }

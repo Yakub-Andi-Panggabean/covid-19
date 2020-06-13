@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="@drawable/ic_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="18dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="18dp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMenu"
+            android:layout_width="378dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="200dp"
+            android:elevation="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/card">
+
+                <ImageButton
+                    android:id="@+id/imageButtonHome"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="50dp"
+                    android:background="@color/card"
+                    app:srcCompat="@drawable/ic_btnhome_inactive" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonInfo"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="90dp"
+                    android:background="@color/card"
+                    app:srcCompat="@drawable/ic_btninfo_active" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonHelp"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="50dp"
+                    android:background="@color/card"
+                    app:srcCompat="@drawable/ic_btnhelp_inactive" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNews"
+            android:layout_width="378dp"
+            android:layout_height="1200dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/cardMenu">
+
+            <ScrollView
+                android:id="@+id/newsScrollView"
+                android:layout_width="match_parent"
+                android:fadeScrollbars="false"
+                android:layout_height="match_parent">
+
+                <WebView
+                    android:id="@+id/newsWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </ScrollView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

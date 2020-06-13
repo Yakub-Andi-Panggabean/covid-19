@@ -1,4 +1,4 @@
-package com.merbuana.covid19.model;
+package com.merbuana.tgb2.model;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.merbuana.covid19.R;
-import com.merbuana.covid19.model.response.Province;
+import com.merbuana.tgb2.R;
+import com.merbuana.tgb2.model.response.Province;
 
 import java.util.List;
 

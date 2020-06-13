@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Covid19</string>
+    <string name="app_name">TGB2</string>
     <string name="txtPositive">Kasus Positif</string>
     <string name="txtCured">Kasus Sembuh</string>
     <string name="txtDeath">Meninggal</string>
@@ -15,7 +15,7 @@
     <string name="helpMenu">Persebaran</string>
     <string name="textSearch">Cari</string>
     <string name="txtLastUpdate">Data Terakhir Diupdate</string>
-    <string name="txtCovid19">Covid-19</string>
+    <string name="txtX">Perhatian</string>
     <string name="txtEarlySymptompTitle">Gejala Awal</string>
     <string name="txtFirstSymptomp">Demam (Suhu badan diatas 38 derajat celcius)</string>
     <string name="txtSecondSymptomp">Batuk</string>
@@ -30,12 +30,6 @@
     <string name="confirmedDescription">Terkonfirmasi</string>
 
 
-
-
-
-
-
-
     <string-array name="spinnerSampleData">
 
         <item>Global</item>
@@ -45,7 +39,6 @@
 
 
     </string-array>
-
 
 
     <!-- TODO: Remove or change this placeholder text -->

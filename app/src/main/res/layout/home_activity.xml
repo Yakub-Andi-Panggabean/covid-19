@@ -196,7 +196,7 @@
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/roboto"
                         android:paddingStart="10dp"
-                        android:text="@string/txtCovid19"
+                        android:text="@string/txtX"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 

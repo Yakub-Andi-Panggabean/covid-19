@@ -1,28 +1,29 @@
-package com.merbuana.covid19;
+package com.merbuana.tgb2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
-import com.merbuana.covid19.listener.AppReadyListener;
-import com.merbuana.covid19.listener.ChartListener;
-import com.merbuana.covid19.service.Covid19Service;
-import com.merbuana.covid19.service.bean.Covid19ServiceBean;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
+import com.github.mikephil.charting.charts.PieChart;
+import com.merbuana.tgb2.listener.AppReadyListener;
+import com.merbuana.tgb2.listener.ChartListener;
+import com.merbuana.tgb2.listener.ImageButtonListener;
+import com.merbuana.tgb2.service.TGB2Service;
+import com.merbuana.tgb2.service.bean.TGB2ServiceBean;
+
+/**
+ *
+ * name : yakub andi panggabean
+ * nim :41819120090
+ *
+ */
 
 public class MainActivity extends AppCompatActivity {
 
-    private Covid19Service covid19Service;
+    private TGB2Service tgb2Service;
 
     private TextView mortalityText;
     private TextView curedText;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView textUpdateDate;
     private TextView textUpdateTime;
     private Spinner spinner;
+    private ImageButton infoButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +47,17 @@ public class MainActivity extends AppCompatActivity {
         textUpdateTime = findViewById(R.id.txtHourTime);
         treatmentText = findViewById(R.id.treatmentData);
         spinner = findViewById(R.id.spinnerRegion);
+        infoButton = findViewById(R.id.imageButtonInfo);
+        infoButton.setOnClickListener(new ImageButtonListener(this));
 
-        covid19Service = new Covid19ServiceBean(getApplicationContext());
+        tgb2Service = new TGB2ServiceBean(getApplicationContext());
 
-        AppReadyListener appReadyListener = new AppReadyListener(this, covid19Service);
+        AppReadyListener appReadyListener = new AppReadyListener(this, tgb2Service);
         appReadyListener.setDetailCases(textUpdateDate, textUpdateTime, confirmedText, mortalityText, curedText, treatmentText);
         appReadyListener.setDrowpdownData(spinner, confirmedText, mortalityText, curedText, treatmentText);
 
 
-        ChartListener chartListener = new ChartListener(covid19Service);
+        ChartListener chartListener = new ChartListener(tgb2Service);
 
         PieChart pieChart = findViewById(R.id.piechart);
         chartListener.initChart(pieChart);

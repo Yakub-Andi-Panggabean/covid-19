@@ -1,15 +1,15 @@
-package com.merbuana.covid19.model.response;
+package com.merbuana.tgb2.model.response;
 
 import java.util.Date;
 
-public class CovidCaseResponse {
+public class CaseResponse {
 
     private int numberOfConfirmedCase;
     private int numberOfRecoveredCase;
     private int numberOfFatalityCase;
     private Date lastUpdate;
 
-    public CovidCaseResponse(Date lastUpdate, int numberOfConfirmedCase, int numberOfRecoveredCase, int numberOfFatalityCase) {
+    public CaseResponse(Date lastUpdate, int numberOfConfirmedCase, int numberOfRecoveredCase, int numberOfFatalityCase) {
         this.lastUpdate = lastUpdate;
         this.numberOfConfirmedCase = numberOfConfirmedCase;
         this.numberOfRecoveredCase = numberOfRecoveredCase;

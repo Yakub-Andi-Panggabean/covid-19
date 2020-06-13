@@ -1,4 +1,4 @@
-package com.merbuana.covid19.model.response;
+package com.merbuana.tgb2.model.response;
 
 public class Province {
 
